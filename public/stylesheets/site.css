@@ -1,0 +1,37 @@
+/**
+    Title: Site styling. 
+    Arthur: Professor Krasso
+    Date: 01/29/23
+    Modified By: Brooks
+    Description: Just the beginning of the styling. 
+*/
+
+* {
+    font-family: Oswald, Verdana, Ariel, sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+
+.nav-menu {
+    display: inline-block;
+    margin: auto;
+    width: 15%;
+}
+
+.menu-items {
+    display: none;
+    position: absolute;
+    background-color: white;
+}
+
+.nav-menu:hover .menu-items {
+    display: block;
+}
+

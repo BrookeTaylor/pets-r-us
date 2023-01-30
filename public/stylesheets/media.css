@@ -1,0 +1,37 @@
+/**
+    Title: Breakpoints
+    Arthur: Professor Krasso
+    Date: 01/29/23
+    Modified By: Brooks
+    Description: Setting up my breakpoints. I have no intention of 
+    keeping them wonky colors; simply for set up. 
+*/
+
+
+
+@media only screen and (max-width: 640px) {
+    body {
+      background-color: rgb(56, 56, 236);
+    }
+  }
+
+  @media only screen and (min-width: 641px) {
+    body {
+      background-color: rgb(249, 154, 154);
+    }
+    #locationsHours {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+
+  }
+
+  @media only screen and (min-width: 1008px) {
+    body {
+      background-color: limegreen;
+    }
+    #locationsHours {
+      display: grid;
+      grid-template-columns: auto auto;
+    }
+  }
