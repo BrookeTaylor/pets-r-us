@@ -1,0 +1,58 @@
+/**
+    Title: Site styling. 
+    Arthur: Professor Krasso
+    Date: 01/29/23
+    Modified By: Brooks
+    Description: Just the beginning of the styling. 
+*/
+
+h1 {
+    text-align: center;
+    color: #0c89f6;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+h1 a:visited {
+    color: #0c89f6;
+}
+
+nav {
+    background-color: #0cf662;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+ 
+
+.menu {
+    display: inline-block;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+
+.menu:hover {
+    background-color: #0bd48d;
+    border-radius: 25px;
+}
+
+.list {
+    display: none;
+    position: absolute;
+    padding: 1em;
+    border-radius: 25px;
+    background-color: #0bd48d;
+}
+
+.menu:hover .list {
+    display: block;
+}
+

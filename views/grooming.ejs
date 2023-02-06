@@ -1,70 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Pets-R-Us</title>
-        <link rel="stylesheet" href="stylesheets/site.css">
-        <link rel="stylesheet" href="stylesheets/media.css">
-
-        <!-- Google Fonts Oswald. -->
-        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
-    </head>
+<%- include("../views/_head")%>
     <body>
         <header>
-            <h1><a href="/">Pets-R-Us</a></h1>
-
-
-
-            <nav>
-                <div class="nav-menu">
-                    <span>Services</span>
-                        <div class="menu-items">
-                            <li><a href="/grooming">Grooming Page</a></li>
-                            <li>Boarding</li>
-                            <li>Training</li>
-                        </div><!-- *** .menu-items *** -->
-                </div><!-- *** .nav-menu *** -->
-
-                <div class="nav-menu">
-                    <span>Account</span>
-                        <div class="menu-items">
-                            <li>Registration</li>
-                            <li>Customer List</li>
-                            <li>Appointment Booking</li>
-                            <li>My Appointments</li>
-                        </div><!-- *** .menu-items *** -->
-                </div><!-- *** .nav-menu *** -->
-                
-                <div class="nav-menu">
-                    <span>Contact</span>
-                        <div class="menu-items">
-                            <li>Locations</li>
-                            <li>Contact Us</li>
-                        </div><!-- *** .menu-items *** -->
-                    </div><!-- *** .nav-menu *** -->
-            </nav>
+<%- include("../views/_header")%>
         </header>
 
 
+<main>
+
+<article>
+    <div class="card">
+        <div>
+    <h2>Grooming</h2>
+
+    <p>Bring your dog in for our grooming. Our pet-loving staff will give your best friend the much-deserved tender loving care it deserves! We offer a variety of services including bathing, grooming, trimming, brushing and more. You’re welcome to bring your dog in for a stand-alone bath or have it bathed already upon pick up from your boarding with us.</p>
+</div>
+</div>
+</article>
 
 
+<section>
+    <aside>
+        <ul>
+            <li>Spa $80 - $120</li>
+
+            <br>
+            <li>De-Shed $22</li>
+
+            <br>
+            <li>Nail Trim $14</li>
+
+            <br>
+            <li>Teeth Brushing $14</li>
+
+        </ul>
+    </aside>
+    <aside>img</aside>
+</section>
 
 
+</main>
 
 
+        
 
 
         <footer>
-            <h2>Contact Us</h2>
-
-            Phone: (888)738-2887
-
-            <form>
-                <input type="email" placeholder="E-mail">
-                <button type="button" id="emailBtn">Send</button>
-            </form>
-            
+            <%- include("../views/_footer")%>
 
         </footer>
 

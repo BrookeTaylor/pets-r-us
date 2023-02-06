@@ -1,7 +1,7 @@
 // imports 
 const express = require("express");
 const app = express();
-const port = 3000; // or 5000
+const port = 3000; 
 
 
 // Static Files
@@ -26,6 +26,15 @@ app.get("", (req, res) => {
 app.get("/grooming", (req, res) => {
     res.render("grooming", { text: "Grooming Page"});
 });
+
+app.get("/boarding", (req, res) => {
+    res.render("boarding", { text: "Boarding Page"});
+});
+
+app.get("/training", (req, res) => {
+    res.render("training", { text: "Training Page"});
+});
+
 
 
 
