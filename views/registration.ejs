@@ -1,0 +1,73 @@
+<!-- 
+    Title: Assignment registration.ejs
+    Arthur: Professor Krasso
+    Date: 02/12/23
+    Modified By: Brooks
+    Description: 
+-->
+<%- include("../views/_head")%>
+    <body>
+        <header>
+<%- include("../views/_header")%>
+        </header>
+        
+
+
+
+
+<main>
+    <article>
+
+
+
+        <div class="card">
+            <div class="card-title">
+                <h2>Pets-R-Us Registration</h2>
+            </div>
+
+            <div class="card-content">
+                <form class="form" method="post" action="/registration">
+                    
+
+
+
+<!-- customerID -->     
+<label for="customerId">Customer Id</label>
+<input type="text" id="customerId" name="customerId" placeholder="Enter customerId" required autofocus />
+
+<!-- email -->
+<label for="email">Email</label>
+<input type="email" id="email" name="email" placeholder="Enter email" />
+
+
+<!-- button. -->
+<div class="form-field">
+    <button type="submit" class="btn btn-primary full-width">Register with us!</button>
+</div>
+
+
+
+
+                </form>
+            </div>
+            
+
+
+            
+            </div>  
+
+
+
+    </article>
+</main>
+
+        <footer>
+            <%- include("../views/_footer")%>
+
+        </footer>
+
+
+
+
+    </body>
+</html>

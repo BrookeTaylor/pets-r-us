@@ -20,11 +20,6 @@ h1 a:visited {
 }
 
 nav {
-    background-color: #0cf662;
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    border-radius: 25px;
     display: grid;
     grid-template-columns: auto auto auto;
 }
@@ -41,14 +36,13 @@ nav {
 
 .menu:hover {
     background-color: #0bd48d;
-    border-radius: 25px;
+
 }
 
 .list {
     display: none;
     position: absolute;
-    padding: 1em;
-    border-radius: 25px;
+    padding: 1em 0em;
     background-color: #0bd48d;
 }
 

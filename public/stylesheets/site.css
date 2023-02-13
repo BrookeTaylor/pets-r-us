@@ -71,7 +71,20 @@ article h2 {
     margin-right: 2.5%;
 }
 
+nav {
+  background-color: #0cf662;
+  width: 100%;
 
+}
+
+
+.list {
+  width:33%;
+}
+
+.list {
+  border-radius: 25px;
+}
 
 
 
@@ -125,10 +138,25 @@ article h2 {
     padding: 1em;
 }
 
+nav {
+  background-color: #0cf662;
+  border-radius: 25px;
+  width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
+.list {
+  width: 160px;
+}
 
+.menu:hover {
+  border-radius: 25px;
+}
 
-
+.list {
+  border-radius: 25px;
+}
 
 
 
@@ -178,8 +206,26 @@ article h2 {
     padding: 1em;
 }
 
+nav {
+  background-color: #0cf662;
+  border-radius: 25px;
+  width: 756px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.list {
+  width: 252px;
+}
 
 
+.menu:hover {
+  border-radius: 25px;
+}
+
+.list {
+  border-radius: 25px;
+}
 
 
 
@@ -217,7 +263,5 @@ article h2 {
 
 
 footer {
-
     bottom: 1em;
-    width:100%;
 }
