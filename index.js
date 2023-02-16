@@ -2,8 +2,9 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const path = require('path');
+const bodyParser = require("body-parser");
 const Schema = mongoose.Schema;
+
 
 const Customer = require("./models/customers.js");
 
@@ -31,6 +32,8 @@ app.use(express.static("public"));
 app.use("/stylesheets", express.static(__dirname + "public/stylesheets"));
 app.use("/images", express.static(__dirname + "public/images"));
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json())
 
 // Set Views
 app.set("views", "./views");
