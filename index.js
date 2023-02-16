@@ -66,7 +66,38 @@ app.get("/registration", (req, res) => {
 
 
 
-app.post("/registration", (req, res) => {
+app.post("/customers", (req, res, next) => {
+
+    // create a new order
+    const newCustomer = new Customer ({
+        customerId: req.body.customerId,
+        email: req.body.email
+    });
+
+
+	newCustomer
+	.save()
+	.then(result => {
+		console.log(result);
+		res.render("index");
+	})
+
+    .catch(err => {
+		console.log(err);
+		res.status(500).json({
+			error: err
+		})
+	})
+});
+
+
+
+
+
+
+/**
+ * 
+app.post("/registration", (req, res, next) => {
 
 
 	const newCustomer = new Customer({
@@ -79,8 +110,7 @@ app.post("/registration", (req, res) => {
 
 	Customer.create(newCustomer, (err, Customer) => {
 		if (err) {
-			console.log(err);
-			next(err);
+			c
 		} else {
 			res.render("index", {
 				pageHeader: "Welcome to Pets-R-Us!",
@@ -91,6 +121,9 @@ app.post("/registration", (req, res) => {
 
 
 })
+ * 
+ */
+
 
 
 app.use(express.urlencoded({ extended: true }));
