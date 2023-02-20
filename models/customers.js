@@ -17,6 +17,7 @@
 // DOUBLE CHECK THIS!! book pg 126
 const mongoose = require("mongoose");
 
+
 // Define the customer schema with fields for customerId and email
 
 let customerSchema  = new mongoose.Schema({
@@ -25,4 +26,4 @@ let customerSchema  = new mongoose.Schema({
 });
 
 // Every mongoose model needs to be exported as a mongoose model. PP 
-module.exports = mongoose.model("Customer", customerSchema );
+module.exports = mongoose.model("Customer", customerSchema);

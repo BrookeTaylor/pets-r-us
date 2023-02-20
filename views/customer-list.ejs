@@ -1,0 +1,52 @@
+<!-- 
+    Title: Assignment customer-list.ejs
+    Arthur: Professor Krasso
+    Date: 02/19/23
+    Modified By: Brooks
+    Description: 
+-->
+<%- include("../views/partials/_head")%>
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
+
+<div class="card">
+
+  <h2>Customer List</h2>
+
+  <div class="containerPadding">
+
+    <section class="one">
+            
+      <table>
+                    
+        <tr>
+
+          <th>Customer Id</th>
+          <th>Email</th>
+
+        </tr>
+
+<% customers.forEach(function(customer) { %>
+
+        <tr>
+
+          <td><%= customer.customerId %></td>
+          <td><%= customer.email %></td>
+
+        </tr>
+
+<% }); %>
+
+        </table>
+                    
+    </section>
+
+  </div>
+
+</div> 
+
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+  </body>
+</html>

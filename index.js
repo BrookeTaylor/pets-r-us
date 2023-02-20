@@ -1,12 +1,19 @@
+/*
+============================================================
+; Title: Pet-R-Us
+; Author: Professor Krasso
+; Date: 2/19/2023
+; Description: index.js file for our Pets-R-Us site.
+;============================================================
+*/
 // imports 
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
-const bodyParser = require("body-parser");
 const Schema = mongoose.Schema;
 
 
-const Customer = require("./models/customers.js");
+const Customer = require("./models/customers");
 
 
 mongoose.set('strictQuery', true);
@@ -25,15 +32,15 @@ mongoose
 	});
 
 
-
+app.engine('html', require('ejs').__express);
 
 // Static Files
 app.use(express.static("public"));
 app.use("/stylesheets", express.static(__dirname + "public/stylesheets"));
 app.use("/images", express.static(__dirname + "public/images"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // Set Views
 app.set("views", "./views");
@@ -44,7 +51,7 @@ app.set("view engine", "ejs");
 
 
 app.get("", (req, res) => {
-    res.render("index", { text: "Index page"});
+    res.render("index", { title: "Index page"});
 });
 
 app.get("/grooming", (req, res) => {
@@ -64,6 +71,16 @@ app.get("/registration", (req, res) => {
 });
 
 
+app.get("/customer-list", (req, res, next) => {
+	Customer.find({}, (err, customer) => {
+		if (err) {
+		  console.error(err);
+		  res.status(500).send("error");
+		} else {
+		  res.render("customer-list", { customers: customer });
+		}
+	  });
+})
 
 
 app.post("/customers", (req, res, next) => {
@@ -94,41 +111,5 @@ app.post("/customers", (req, res, next) => {
 
 
 
-
-/**
- * 
-app.post("/registration", (req, res, next) => {
-
-
-	const newCustomer = new Customer({
-		customerId: req.body.customerId,
-		email: req.body.email
-	});
-
-
-
-
-	Customer.create(newCustomer, (err, Customer) => {
-		if (err) {
-			c
-		} else {
-			res.render("index", {
-				pageHeader: "Welcome to Pets-R-Us!",
-				title: "Pets-R-Us: Home"
-			})
-		}
-	});
-
-
-})
- * 
- */
-
-
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-
 // Listen on port 3000
-app.listen(PORT, () => console.info("Listening on port ${port}"));
+app.listen(PORT, () => console.info(`Listening on port ${PORT}`));

@@ -1,67 +1,73 @@
+<!-- 
+    Title: Assignment training.ejs
+    Arthur: Professor Krasso
+    Date: 02/19/23
+    Modified By: Brooks
+    Description: 
+-->
 <%- include("../views/partials/_head")%>
-    <body>
-        <header>
-<%- include("../views/partials/_header")%>
-        </header>
-        
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
 
+        <div class="card">
 
-  
-<main>
-
-<article>
-    <div class="card">
-        <div>
             <h2>Training</h2>
 
+            <article class="one">
 
-            <div class="breakup">
-                <div><p>Looking to provide your dog with some training? Look no further. Our trainers can help you get your pup the quality training it needs. We believe in positive reinforcement and building your relationship with your dog to build mutual trust. With our trainers you’ll be able to work on basic training, obedience, fear, aggression, anxiety or any other needs that may arise.</p></div>
-                <div>
-                    <ul>
-                        <li>three tiers of pricing for puppies</li>
-            
-                        <br>
-                        <li>three tiers of pricing for adolescences</li>
-            
-                        <br>
-                        <li>two tiers of pricing for adults</li>
-            
-                    </ul>
+                <div class="containerPadding">
+
+                    <p>Looking to provide your dog with some training? Look no further. Our trainers can help you get your pup the quality training it needs. We believe in positive reinforcement and building your relationship with your dog to build mutual trust. With our trainers you’ll be able to work on basic training, obedience, fear, aggression, anxiety or any other needs that may arise.</p>
+
                 </div>
-            </div>
-            
+
+            </article>
 
         </div>
-    </div>
-</article>
 
+        <section class="one">
 
-<section>
-    <aside>
-        <!-- image source: https://unsplash.com/photos/xvYxGcwFvuE -->
-        <img src="/images/trainer.jpg" width="350" height="300">
-    </aside>
-    <aside>
-        <h3>Meet the Trainer: Sabrina</h3>
-        <p>Sabrina is our head trainer here at Pets-R-Us</p>
-    </aside>
-</section>
+            <ul>
+                <li>three tiers of pricing for puppies</li>
+    
+                <br>
+                <li>three tiers of pricing for adolescences</li>
+    
+                <br>
+                <li>two tiers of pricing for adults</li>
+    
+            </ul>
 
+        </section>
 
+        <div class="card">
 
+            <h3>Meet the Trainer: Sabrina</h3>
 
-</main>
+            <article class="two">
 
+                <div class="containerPadding">
 
+                    <p>Sabrina is our head trainer here at Pets-R-Us</p>
 
-        <footer>
-            <%- include("../views/partials/_footer")%>
+                </div>
 
-        </footer>
+                <div class="containerPadding">
 
+                    <!-- image source: https://unsplash.com/photos/xvYxGcwFvuE -->
+                    <figure>
+                        <img src="/images/trainer.jpg" alt="Sabrina, our dog trainer.">
+                        <figcaption>Meet Sabrina, our dog trainer.</figcaption>
+                    </figure>
+                    
+                </div>
 
+            </article>
 
+        </div>
 
-    </body>
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+  </body>
 </html>

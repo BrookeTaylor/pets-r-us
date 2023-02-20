@@ -1,0 +1,141 @@
+/**
+    Title: Site styling. 
+    Arthur: Professor Krasso
+    Date: 02/16/23
+    Modified By: Brooks
+    Description: screen size set up. 
+*/
+
+/* ********** SMALL SCREEN < 641 ********** */ 
+@media only screen and (max-width: 640px) {
+
+  /** TESTING 
+  body {
+    background-color: lightgreen;
+  }**/ 
+
+  nav {
+    width: 100%;
+  }
+
+.one {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.two {
+  width: 80%;
+  margin-left: 10%;
+}
+
+section {
+  width: 80%;
+  margin-left: 10%;
+}
+
+img {
+    width: 100%;
+}
+
+}
+ 
+
+
+
+
+
+
+
+
+
+ 
+/* ********** MEDIUM SCREEN >640 ********** */
+  @media only screen and (min-width: 641px) {
+
+  /** TESTING  
+  body {
+    background-color: lightcoral;
+  }**/
+
+  nav {
+    border-radius: 25px;
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .list {
+    width: 160px;
+  }
+
+  .menu:hover {
+    border-radius: 25px;
+  }
+
+  .one {
+    width: 75%;
+    margin-left: 15%;
+  } 
+  
+.two {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+
+img {
+    width: 100%;
+}
+
+.card {
+    width: 90%;
+    margin-left: 5%;
+}
+
+section {
+  width: 90%;
+  margin-left: 5%;
+}
+
+}
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+/* ********** LARGE SCREEN > 1007 ********** */ 
+  @media only screen and (min-width: 1008px) {
+
+  /** TESTING 
+  body {
+    background-color: lightblue;
+  }**/ 
+
+  nav {
+    width: 756px;
+  }
+  
+  .list {
+    width: 252px;
+  }
+
+
+.card {
+  width: 80%;
+  margin-left: 10%;
+}
+
+section {
+  width: 80%;
+  margin-left: 10%;
+}
+
+}

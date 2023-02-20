@@ -1,18 +1,23 @@
+<!-- 
+    Title: Assignment Index
+    Arthur: Professor Krasso
+    Date: 02/19/23
+    Modified By: Brooks
+    Description: 
+-->
 <%- include("../views/partials/_head")%>
-    <body>
-        <header>
-<%- include("../views/partials/_header")%>
-        </header>
-        
-<main>
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
 
-        <article>
-          <div class="card">
-            <div>
-            <h2>Dog of the Week</h2>
-            
-            <div class="breakup">
-              <div>
+      <div class="card">
+
+        <h2>Dog of the Week</h2>
+        
+        <article class="two">
+           
+          <div class="containerPadding">
+
             <p>This week’s pick is the Boxer Dog!</p>
 
             <p>Rumor is that this dog got its name from their playstyle. 
@@ -29,146 +34,136 @@
                 it’s important to keep their ears clean as well. Proper 
                 cleaning and grooming will ensure your pup lives a 
                 long, happy, and healthy life.</p>
-              </div>
-              
-              <div>
-                <!-- image source: https://unsplash.com/photos/fZFAOhWETpM -->
-                <img src="/images/boxer.jpg" width="350" height="300">
-              </div>
-              
-              </div>
-              </div>
+
           </div>
+
+          <div class="containerPadding">
+
+            <!-- image source: https://unsplash.com/photos/fZFAOhWETpM -->
+            <figure>
+              <img src="/images/boxer.jpg" alt="This is dog of the week.">
+              <figcaption>Dog of the week. Boxer!</figcaption>
+            </figure>
+              
+
+          </div>
+
         </article>
 
- 
+      </div><!-- .card -->
 
 
 
 
-<section>
+      <section class="two">
 
-  <aside>
+        <div class="containerPadding">
 
-        <h2>Locations</h2>
-        <address>
-            <h3>Omaha</h3>
-            1652019 Galvin Rd S<br>
-            Bellevue, NE 68005
-        </address>
+          <h3>Locations</h3>
 
-        <address>
-            <h3>St. Louis</h3>
-            1215225 Wydown Blvd<br>
-            St. Louis, MO 63105
-        </address>
+          <address>
+              <h3>Omaha</h3>
+              1652019 Galvin Rd S<br>
+              Bellevue, NE 68005
+          </address>
+  
+          <address>
+              <h3>St. Louis</h3>
+              1215225 Wydown Blvd<br>
+              St. Louis, MO 63105
+          </address>
+  
+          <address>
+              <h3>Kansas City</h3>
+              3212019 Village West Pkwy<br>
+              Kansas City, KS 66111
+          </address>
 
-        <address>
-            <h3>Kansas City</h3>
-            3212019 Village West Pkwy<br>
-            Kansas City, KS 66111
-        </address>
-  </aside>
+        </div>
 
-  <aside>
-        <h2>Store Hours:</h2>
-        <li>Mon 9AM - 8PM</li>
-        <li>Tue 9AM - 8PM</li>
-        <li>Wed 9AM - 8PM</li>
-        <li>Thu 9AM - 8PM</li>
-        <li>Fri 9AM - 8PM</li>
-        <li>Sat 9AM - 8PM</li>
-        <li>Sun 10AM - 6PM</li>
+        <div class="containerPadding">
 
-  </aside>
+          <h3>Store Hours:</h3>
 
-</section>
+          <li>Mon 9AM - 8PM</li>
+          <li>Tue 9AM - 8PM</li>
+          <li>Wed 9AM - 8PM</li>
+          <li>Thu 9AM - 8PM</li>
+          <li>Fri 9AM - 8PM</li>
+          <li>Sat 9AM - 8PM</li>
+          <li>Sun 10AM - 6PM</li>
+          
+        </div>
 
+      </section>
 
+      <div class="card">
 
+        <h3>Testimonials</h3>
 
+        <article class="two">
 
+          <div class="containerPadding">
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <article>
-          <div class="card">
-            <div>
-            <h2>Testimonials</h2>
-
-            <div class="breakup">
-<div>
             <details open>
-                <summary>Online_User</summary>
-                <p>“The prices are also very reasonable for the quality of service.”</p>
-              </details> 
 
-              <details open>
-                <summary>Online_User</summary>
-                <p>“I highly recommend this place for daycare, training and boarding.”</p>
-              </details> 
+              <summary>Online_User</summary>
+  
+              <p>“The prices are also very reasonable for the quality of service.”</p>
+  
+            </details> 
+          
+            <details open>
+  
+              <summary>Online_User</summary>
+  
+              <p>“I highly recommend this place for daycare, training and boarding.”</p>
+  
+            </details> 
+          
+            <details open>
+  
+              <summary>Online_User</summary>
+  
+              <p>“Wonderful front desk staff and great dog handlers for our 4 fur babies!!!!”</p>
+  
+            </details> 
 
-              <details open>
-                <summary>Online_User</summary>
-                <p>“Wonderful front desk staff and great dog handlers for our 4 fur babies!!!!”</p>
-              </details> 
-</div>
+          </div><!-- .containerPadding -->
 
-<div>
+          <div class="containerPadding">
 
-              <details open>
-                <summary>Online_User</summary>
-                <p>“My dogs came home happier than any place we’ve ever boarded them!”</p>
-              </details>
+            <details open>
 
-              <details open>
-                <summary>Online_User</summary>
-                <p>“Super friendly staff, clean facility.”</p>
-              </details> 
+              <summary>Online_User</summary>
+  
+              <p>“My dogs came home happier than any place we’ve ever boarded them!”</p>
+  
+            </details>
+          
+            <details open>
+  
+              <summary>Online_User</summary>
+  
+              <p>“Super friendly staff, clean facility.”</p>
+  
+            </details> 
+          
+            <details open>
+  
+              <summary>Online_User</summary>
+  
+              <p>“Absolutely love Pets-R-Us for our pups grooming.”</p>
+  
+            </details>
 
-              <details open>
-                <summary>Online_User</summary>
-                <p>“Absolutely love Pets-R-Us for our pups grooming.”</p>
-              </details> 
-              </div>
-            </div><!-- *** .breakup *** -->
-              
-</div></div>
-              
+          </div>
+
         </article>
 
+      </div>
 
-
-      </main>
-
-        <footer>
-            <%- include("../views/partials/_footer")%>
-
-        </footer>
-
-
-
-
-    </body>
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+  </body>
 </html>

@@ -6,68 +6,55 @@
     Description: 
 -->
 <%- include("../views/partials/_head")%>
-    <body>
-        <header>
-<%- include("../views/partials/_header")%>
-        </header>
-        
-
-
-
-
-<main>
-    <article>
-
-
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
 
         <div class="card">
-            <div class="card-title">
-                <h2>Pets-R-Us Registration</h2>
-            </div>
 
-            <div class="card-content">
+            <h2>Pets-R-Us Registration</h2>
+
+            <article class="two">
+
+             <div class="containerPadding">
+
                 <form class="form" method="post" action="/customers">
+
+                    <!-- customerID -->
+                    <label for="customerId">Customer Id</label>
+                    <input type="text" id="customerId" name="customerId" placeholder="Enter customerId" required autofocus />
+
+                    <!-- email -->
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter email" />
+
+                    <!-- button. -->
+                    <div class="form-field">
+
+                        <button type="submit" class="btn btn-primary full-width">Register with us!</button>
                     
-
-
-
-<!-- customerID -->     
-<label for="customerId">Customer Id</label>
-<input type="text" id="customerId" name="customerId" placeholder="Enter customerId" required autofocus />
-
-<!-- email -->
-<label for="email">Email</label>
-<input type="email" id="email" name="email" placeholder="Enter email" />
-
-
-<!-- button. -->
-<div class="form-field">
-    <button type="submit" class="btn btn-primary full-width">Register with us!</button>
-</div>
-
-
-
+                    </div>
 
                 </form>
-            </div>
-            
 
+             </div>
 
-            
-            </div>  
+             <div class="containerPadding">
 
+            <!-- image source: https://unsplash.com/photos/-laUYEt-7UE -->
+            <figure>
+                <img src="/images/register.jpg" alt="Puppy invitation.">
+                <figcaption>Join us today!</figcaption>
+            </figure>
+           
+                
+             </div>
 
+            </article>
 
-    </article>
-</main>
+        </div>
 
-        <footer>
-            <%- include("../views/partials/_footer")%>
-
-        </footer>
-
-
-
-
-    </body>
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+  </body>
 </html>

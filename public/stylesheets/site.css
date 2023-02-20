@@ -6,8 +6,20 @@
     Description: Just the beginning of the styling. 
 */
 
+/** 
+      ************ ALL ************** 
+*/
+
 * {
     font-family: Oswald, Verdana, Ariel, sans-serif;
+}
+
+h1, h2, h3 {
+  text-align: center;
+}
+
+nav {
+  background-color: #0cf662;
 }
 
 li {
@@ -15,250 +27,30 @@ li {
 }
 
 body {
-    background-color: #eee;
+    background-color: rgba(11, 171, 212, .25);
     min-height: 100vh;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .card {
-    background-color: #eee;
+    background-color: #fff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 25px;
+    margin-bottom: 1em;
 }
 
-.card > div {
-    padding: 1em;
-}
-
-article h2 {
-    text-align: center;
+.containerPadding {
+  padding: 1em;
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-@media only screen and (max-width: 640px) {
-    article {
-      width: 100%;
-      margin-top: 2em;
-  }
-
-  section {
-    width: 100%;
-    margin-left: 30%;
-  }
-
-  .breakup {
-    width: 95%;
-    margin-left: 2.5%;
-    margin-right: 2.5%;
-}
-
-nav {
-  background-color: #0cf662;
-  width: 100%;
-
-}
-
-
+/** keep **/
 .list {
-  width:33%;
-}
-
-.list {
+  width: 33%;
   border-radius: 25px;
 }
-
-
-
-
-
-  body {
-    background-color: lightgreen;
-  }
-  }
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  @media only screen and (min-width: 641px) {
-     article {
-      width: 80%;
-      margin-left: 10%;
-      margin-right: 10%;
-      margin-top: 2em;
-  }
-  section {
-    width: 70%;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  .breakup {
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-.breakup > div {
-    padding: 1em;
-}
-
-nav {
-  background-color: #0cf662;
-  border-radius: 25px;
-  width: 480px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.list {
-  width: 160px;
-}
-
-.menu:hover {
-  border-radius: 25px;
-}
-
-.list {
-  border-radius: 25px;
-}
-
-
-
-  body {
-    background-color: lightcoral;
-  }
-  }
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
- 
-  @media only screen and (min-width: 1008px) {
-    article {
-        width: 80%;
-  }
-
-  section {
-    width: 50%;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: auto auto;
-  }
-
-  .breakup {
-    width: 80%;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-top: 2em;
-    display: grid;
-    grid-template-columns: auto auto;
-}
-
-.breakup > div {
-    padding: 1em;
-}
-
-nav {
-  background-color: #0cf662;
-  border-radius: 25px;
-  width: 756px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.list {
-  width: 252px;
-}
-
-
-.menu:hover {
-  border-radius: 25px;
-}
-
-.list {
-  border-radius: 25px;
-}
-
-
-
-  body {
-    background-color: lightblue;
-  }
-
-  }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
