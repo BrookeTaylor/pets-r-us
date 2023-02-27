@@ -1,0 +1,93 @@
+<!-- 
+    Title: Assignment appointments.ejs
+    Arthur: Professor Krasso
+    Date: 02/26/23
+    Modified By: Brooks
+    Description: 
+-->
+<%- include("../views/partials/_head")%>
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
+
+        <div class="card">
+
+            <h2>Appointments</h2>
+
+            <article class="one">
+
+                <div class="containerPadding">
+
+                  
+
+<form class="form" method="post" action="/booking">
+
+  <!-- userName -->
+  <label for="userName">User Name</label>
+  <input type="text" id="userName" name="userName" placeholder="Enter a user name" required autofocus />
+
+  <br><br>
+
+  <!-- firstName -->
+  <label for="firstName">First Name</label>
+  <input type="text" id="firstName" name="firstName" placeholder="Enter a First name" required autofocus />
+
+  <br><br>
+
+  <!-- lastName -->
+  <label for="lastName">Last Name</label>
+  <input type="text" id="lastName" name="lastName" placeholder="Enter a Last name" required autofocus />
+
+  <br><br>
+
+  <!-- email -->
+  <label for="email">E-mail</label>
+  <input type="text" id="email" name="email" placeholder="Enter an E-mail" required autofocus />
+  
+  <br><br>
+
+
+<!-- Booking Services Input Field -->
+<label for="services">Services</label>
+
+<select class="drop-down-menu" id="services" name="services" required>
+
+  <% services.forEach((service) => { %>
+
+    <option value="<%= service.value %>"><%= service.text %></option>
+
+    <% }) %>
+
+  </select>
+
+
+
+
+
+  <!-- button. -->
+  <div class="form-field">
+
+  <button type="submit" class="btn btn-primary full-width">Set up an appointment!</button>
+  
+  </div>
+</form>
+
+
+
+
+
+
+
+
+                    
+                </div>
+
+            </article>
+
+        </div>
+
+
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+  </body>
+</html>

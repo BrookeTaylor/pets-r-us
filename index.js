@@ -11,9 +11,11 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
+const fs = require("fs");
 
 
 const Customer = require("./models/customers");
+const Appointment = require("./models/appointment");
 
 
 mongoose.set('strictQuery', true);
@@ -108,6 +110,42 @@ app.post("/customers", (req, res, next) => {
 });
 
 
+app.get("/booking", (req, res) => {
+
+	let jsonFile = fs.readFileSync('./public/data/services.json');
+	let services = JSON.parse(jsonFile);
+
+	res.render("booking", { services: services });
+
+});
+
+app.post("/booking", (req, res, next) => {
+
+
+	const newAppointment = new Appointment ({
+ 
+	   userName: req.body.userName,
+	   firstName: req.body.firstName,
+	   lastName: req.body.lastName,
+	   email: req.body.email,
+	   services: req.body.services
+	});
+ 
+ 
+   newAppointment
+   .save()
+   .then(result => {
+	  console.log(result);
+	  res.render("index");
+   })
+ 
+	.catch(err => {
+	  console.log(err);
+	  res.status(500).json({
+		 error: err
+	  })
+   })
+ });
 
 
 
