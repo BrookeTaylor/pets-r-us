@@ -52,8 +52,8 @@ app.set("view engine", "ejs");
 
 
 
-app.get("", (req, res) => {
-    res.render("index", { title: "Index page"});
+app.get("/", (req, res) => {
+    res.render("index.html", { title: "Index page"});
 });
 
 app.get("/grooming", (req, res) => {
@@ -97,7 +97,7 @@ app.post("/customers", (req, res, next) => {
 	.save()
 	.then(result => {
 		console.log(result);
-		res.render("index");
+		res.render("index.html");
 	})
 
     .catch(err => {
@@ -135,7 +135,7 @@ app.post("/booking", (req, res, next) => {
    .save()
    .then(result => {
 	  console.log(result);
-	  res.render("index");
+	  res.render("index.html");
    })
  
 	.catch(err => {
