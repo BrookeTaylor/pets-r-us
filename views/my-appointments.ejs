@@ -1,0 +1,96 @@
+<!-- 
+    Title: Assignment registration.ejs
+    Arthur: Professor Krasso
+    Date: 02/28/23
+    Modified By: Brooks
+    Description: Search for your appointments page. 
+-->
+<%- include("../views/partials/_head")%>
+  <body>
+    <header><%- include("../views/partials/_header")%></header>
+    <main>
+
+
+
+        <div class="card">
+
+            <h2>Search for your Appointment</h2>
+
+            
+            <article class="one">
+
+                <div class="containerPadding">
+            
+                   <div class="form">
+            
+                       
+                       <label for="aptEmail">E-mail</label>
+                       <input type="email" id="aptEmail" name="aptEmail" placeholder="Enter E-mail Address" required autofocus />
+            
+                   
+                       <div class="form-field">
+            
+                           <button type="submit" class="btn btn-primary full-width" id="fetch">Fetch!</button>
+                       
+                       </div>
+            
+                   </div>
+            
+                   <br>
+            
+                   <div id="appointments"></div>
+            
+                </div>
+            
+               </article>
+
+        </div>
+
+
+
+
+
+
+    
+
+    </main>
+    <footer><%- include("../views/partials/_footer")%></footer>
+
+<script>
+
+
+
+document.getElementById("fetch").onclick = function() {
+
+let search = document.getElementById("aptEmail").value;
+
+fetch("api/appointments/" + search)
+  
+  .then(res => res.json())
+  
+  .then(data => {
+
+    if (data.length > 0) {
+
+
+        let table = `<table><thead><tr><th>User Name</th><th>First Name</th><th>Last Name</th><th>E-mail</th><th>Service</th></tr></thead><tbody>`;
+
+            for (let appointment of data) {
+
+                table += `<tr><td>${appointment.userName}</td><td>${appointment.firstName}</td><td>${appointment.lastName}</td><td>${appointment.email}</td><td>${appointment.services}</td></tr>`;
+            }
+            
+        table += `</tbody></table>`;    
+
+        document.getElementById("appointments").innerHTML = table;
+
+    }
+  })
+
+}
+
+
+</script>
+    
+</body>
+</html>

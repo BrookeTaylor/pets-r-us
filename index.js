@@ -84,7 +84,6 @@ app.get("/customer-list", (req, res, next) => {
 	  });
 })
 
-
 app.post("/customers", (req, res, next) => {
 
     // create a new order
@@ -146,6 +145,29 @@ app.post("/booking", (req, res, next) => {
 	  })
    })
  });
+
+
+ app.get("/my-appointments", (req, res) => {
+	Appointment.find({}, (err, appointment) => {
+		if (err) {
+		  console.error(err);
+		  res.status(500).send("error");
+		} else {
+		  res.render("my-appointments", { appointments: appointment });
+		}
+	  });
+});
+
+app.get('/api/appointments/:email', (req, res, next) => {
+	Appointment.find({'email': req.params.email}, (err, appointments) => {
+		if (err) {
+			console.log(err);
+			next(err);
+		} else {
+			res.json(appointments);
+		}
+	})
+})
 
 
 

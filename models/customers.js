@@ -4,7 +4,7 @@
 ; Author: Professor Krasso 
 ; Date: 02/12/2023
 ; Modified By: Brooks
-; Description: 
+; Description: Schema for customers.
 ============================================
 */ 
 
