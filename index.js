@@ -46,14 +46,14 @@ app.use(express.json());
 
 // Set Views
 app.set("views", "./views");
-app.set("view engine", "html");
+app.set("view engine", "ejs");
 
 
 
 
 
 app.get("/", (req, res) => {
-    res.render("index.html", { title: "Index page"});
+    res.render("index", { title: "Index page"});
 });
 
 app.get("/grooming", (req, res) => {
@@ -97,7 +97,7 @@ app.post("/customers", (req, res, next) => {
 	.save()
 	.then(result => {
 		console.log(result);
-		res.render("index.html");
+		res.render("index");
 	})
 
     .catch(err => {
@@ -135,7 +135,7 @@ app.post("/booking", (req, res, next) => {
    .save()
    .then(result => {
 	  console.log(result);
-	  res.render("index.html");
+	  res.render("index");
    })
  
 	.catch(err => {
